@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const menuItems = [
-        { name: "Curry Chicken Plate", price: 7.99 },
-        { name: "Fish Fry", price: 8.99 },
-        { name: "Pizza", price: 9.99 }
+        { name: "Neutella Smarties", price: 55.00- },
+        { name: "Neutella Pancakes", price: 45.00 },
+        { name: "Traditional", price: 15.00 }
     ];
 
     const menuContainer = document.getElementById("menu-items");
