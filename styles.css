@@ -56,9 +56,26 @@ nav ul li a {
 }
 
 .hero {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 50px;
     background: #f8f8f8;
+    text-align: left;
+}
+
+.hero img {
+    max-width: 50%;
+    height: auto;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
 }
 
 .hero button {
@@ -83,19 +100,30 @@ nav ul li a {
     margin: auto;
 }
 
-.menu-grid ul {
-    list-style: none;
-    padding: 0;
+.menu-item {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
-.menu-grid ul li {
-    background: #fff;
-    padding: 10px;
-    border: 1px solid #ddd;
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.menu-item button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
 footer {
-    background: #222;
+    background: red;
     color: white;
     padding: 20px;
     text-align: center;
@@ -121,6 +149,27 @@ footer {
     color: white;
 }
 
+.subscription {
+    text-align: center;
+    padding: 20px;
+    background: #ff4d4d;
+    color: white;
+}
+
+.subscription input {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.subscription button {
+    background: white;
+    color: #ff4d4d;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
@@ -136,6 +185,19 @@ footer {
     
     .nav-icons {
         margin-top: 10px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero img {
+        max-width: 100%;
+    }
+    
+    .hero-content {
+        max-width: 100%;
     }
     
     .menu-grid {
