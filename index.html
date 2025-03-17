@@ -35,9 +35,17 @@
     </section>
     
     <section class="menu">
-        <h2>Menu</h2>
+    <h2>Menu</h2>
+    <div class="menu-container">
+        <!-- Menu Grid (70% width) -->
         <div class="menu-grid">
+            <!-- Menu items here (same as before) -->
             <div class="menu-item">
+                <img src="The-Pancake-emporium.png" alt="Burger">
+                <p>Burger - $3.80</p>
+                <button>Order</button>
+            </div>
+            < <div class="menu-item">
                 <img src="The-Pancake-emporium.png" alt="Burger">
                 <p>Burger - $3.80</p>
                 <button>Order</button>
@@ -118,7 +126,46 @@
                 <button>Order</button>
             </div>
         </div>
-    </section>
+
+        <!-- Checkout Form (30% width) -->
+        <div class="checkout">
+            <h3>Checkout</h3>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <!-- Delivery or Pick Up Option -->
+                <fieldset>
+                    <legend>Choose your option:</legend>
+                    <label for="delivery">
+                        <input type="radio" id="delivery" name="order-option" value="Delivery" required> Delivery
+                    </label>
+                    <label for="pickup">
+                        <input type="radio" id="pickup" name="order-option" value="Pick Up"> Pick Up
+                    </label>
+                </fieldset>
+
+                <button type="submit">Oder</button>
+            </form>
+
+            <div class="ordered-items">
+                <h4>Ordered Items</h4>
+                <ul>
+                    <!-- List of ordered items will appear here -->
+                    <li>Burger - $3.80</li>
+                    <li>Pizza - $8.80</li>
+                    <li>Pasta - $9.30</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
     
     <footer>
         <div class="footer-container">
