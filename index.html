@@ -3,56 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The OPancakes Emporium - Online Ordering</title>
+    <title>Food Ordering System</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <div class="logo">The Pancakes Emporium</div>
         <nav>
-            <a href="#">Our Menu</a>
-            <a href="#">Login</a>
-            <button class="cta">Create an Account</button>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <section class="restaurant-banner">
-            <h1>The Green Palace</h1>
-            <p>🌍 Cape Town, Wersten Cape</p>
-            <p>⭐ 4.5 (36 Reviews) <span class="status">OPEN</span></p>
-        </section>
-        <section class="menu">
-            <div class="filters">
-                <button class="filter active">Popular</button>
-                <button class="filter">Breakfast</button>
-                <button class="filter">Curry</button>
-                <button class="filter">Fish Fry</button>
-                <button class="filter">Pizza</button>
-                <button class="filter">Rice</button>
-            </div>
-            <div class="menu-items" id="menu-items">
-                <!-- Menu items will be populated dynamically -->
-            </div>
-        </section>
-        <aside class="order-summary">
-            <h2>Your Orders</h2>
-            <div id="order-list">
-                <!-- Orders will be dynamically updated here -->
-            </div>
-            <div class="checkout">
-                <p>Subtotal: <span id="subtotal">$0.00</span></p>
-                <p>Service Fee: <span id="service-fee">$3.00</span></p>
-                <p>Delivery Fee: <span id="delivery-fee">$5.00</span></p>
-                <p class="total">Total: <span id="total">$0.00</span></p>
-                <button class="checkout-btn">Checkout</button>
-            </div>
-        </aside>
-    </main>
-    <footer>
-        <div class="footer-section">About Us | Contact | Blog | Careers</div>
-        <div class="footer-section">Popular Cities: Boston, NYC, LA, SF</div>
-        <div class="footer-section">Contact: support@kolafoods.com</div>
-    </footer>
+    
+    <section class="hero">
+        <h1>Food Ordering System</h1>
+        <button>Order Now</button>
+    </section>
+    
+    <section class="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li>Burger - $3.80</li>
+            <li>Pizza - $8.80</li>
+            <li>Pasta - $9.30</li>
+        </ul>
+    </section>
 </body>
 </html>
