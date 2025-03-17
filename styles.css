@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background: #fff;
+    background: red; /* Red background for header */
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -17,6 +17,7 @@ header {
 nav {
     display: flex;
     align-items: center;
+    color: white; /* Make text inside nav white */
 }
 
 nav ul {
@@ -32,7 +33,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: white; /* Make links inside nav white */
     font-weight: bold;
 }
 
@@ -40,6 +41,7 @@ nav ul li a {
     display: flex;
     gap: 15px;
     font-size: 18px;
+    color: white; /* Ensure icons are also white */
 }
 
 .logo {
