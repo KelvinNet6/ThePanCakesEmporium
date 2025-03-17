@@ -99,17 +99,17 @@ nav ul {
     cursor: pointer;
 }
 
-.menu {
-    text-align: center;
-    padding: 20px;
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);  /* Ensure 4 items per row */
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 10px;
+    width: 70%; /* Takes 70% of the section */
 }
 
 .menu-item {
@@ -117,12 +117,6 @@ nav ul {
     padding: 15px;
     border: 1px solid #ddd;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.menu-item:hover {
-    transform: scale(1.05);
 }
 
 .menu-item img {
@@ -138,6 +132,67 @@ nav ul {
     padding: 5px 10px;
     cursor: pointer;
     margin-top: 5px;
+}
+
+/* Checkout Section */
+.checkout {
+    width: 30%; /* Takes 30% of the section */
+    padding: 20px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+.checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkout input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.checkout button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ordered-items {
+    margin-top: 20px;
+}
+
+.ordered-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ordered-items ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        width: 100%;
+    }
+
+    .checkout {
+        width: 100%;
+    }
 }
 
 /* Footer styles */
