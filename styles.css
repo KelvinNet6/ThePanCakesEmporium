@@ -20,7 +20,8 @@ header {
     gap: 10px;
     font-size: 20px;
     font-weight: bold;
-    color: white; /* Make logo text white */
+    color: white; 
+    border-radius: 10px;
 }
 
 .logo img {
