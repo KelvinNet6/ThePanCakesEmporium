@@ -1,22 +1,29 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #fff;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -26,49 +33,117 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
     font-weight: bold;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
 }
 
 .hero {
     text-align: center;
     padding: 50px;
-    background: url('The-Pancake-emporium.png') no-repeat center/cover;
-    color: #fff;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    background: #f8f8f8;
 }
 
 .hero button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: red;
+    background: #ff4d4d;
     color: white;
     border: none;
+    padding: 10px 20px;
+    font-size: 18px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 .menu {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
 }
 
-.menu h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: auto;
 }
 
-.menu ul {
+.menu-grid ul {
     list-style: none;
     padding: 0;
 }
 
-.menu ul li {
-    font-size: 20px;
-    margin: 10px 0;
+.menu-grid ul li {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    max-width: 300px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    
+    .nav-icons {
+        margin-top: 10px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
