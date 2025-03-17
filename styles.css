@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,89 +7,68 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d32f2f;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
-nav a {
-    margin: 0 10px;
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     text-decoration: none;
     color: #333;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.cta {
-    background-color: #d32f2f;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-}
-
-.restaurant-banner {
+.hero {
     text-align: center;
-    background: url('The-Pancake-emporium.png') no-repeat center center/cover;
-    color: white;
-    padding: 40px 20px;
+    padding: 50px;
+    background: url('hero-image.jpg') no-repeat center/cover;
+    color: #fff;
 }
 
-.menu {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.filters {
-    display: flex;
-    gap: 10px;
+.hero h1 {
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
-.filter {
-    padding: 8px 12px;
-    border: none;
-    cursor: pointer;
-    background: #eee;
-}
-
-.filter.active {
-    background: #d32f2f;
-    color: white;
-}
-
-.menu-items {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.order-summary {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 250px;
-}
-
-.checkout-btn {
-    width: 100%;
-    padding: 10px;
-    background: #d32f2f;
+.hero button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: red;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
+
+.menu {
+    text-align: center;
+    padding: 30px;
+}
+
+.menu h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
