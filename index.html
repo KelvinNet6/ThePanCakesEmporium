@@ -105,57 +105,59 @@
                 <p>Coffee - $2.50</p>
                 <button>Order</button>
             </div>
-            <div class="menu-item">
-                <img src="The-Pancake-emporium.png" alt="Tea">
-                <p>Tea - $2.00</p>
-                <button>Order</button>
-            </div>
-            <div class="menu-item">
-                <img src="The-Pancake-emporium.png" alt="Donuts">
-                <p>Donuts - $3.00</p>
-                <button>Order</button>
-            </div>
         </div>
 
-        <!-- Checkout Form (30% width) -->
-        <div class="checkout">
-            <h3>Checkout</h3>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
-                
-                <label for="phone">Phone:</label>
-                <input type="text" id="phone" name="phone" required>
-                
-                <!-- Delivery or Pick Up Option -->
-                <fieldset>
-                    <legend>Choose your option:</legend>
-                    <label for="delivery">
-                        <input type="radio" id="delivery" name="order-option" value="Delivery" required> Delivery
-                    </label>
-                    <label for="pickup">
-                        <input type="radio" id="pickup" name="order-option" value="Pick Up"> Pick Up
-                    </label>
-                </fieldset>
+  <section class="checkout">
+    <div class="checkout-form">
+        <h3>Checkout</h3>
+        <form id="checkoutForm">
+            <label for="deliveryOption">Choose an option:</label>
+            <select id="deliveryOption" name="deliveryOption" onchange="updateCheckout()">
+                <option value="pickup">Pick Up</option>
+                <option value="delivery">Delivery</option>
+            </select>
 
-                <button type="submit">Oder</button>
-            </form>
+            <div id="deliveryAddress" style="display: none;">
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address">
+            </div>
 
             <div class="ordered-items">
                 <h4>Ordered Items</h4>
-                <ul>
+                <ul id="itemList">
                     <!-- List of ordered items will appear here -->
-                    <li>Burger - $3.80</li>
-                    <li>Pizza - $8.80</li>
-                    <li>Pasta - $9.30</li>
+                    <li>
+                        <i class="fas fa-hamburger"></i>
+                        <p>Burger</p>
+                        <p class="price">$3.80</p>
+                        <i class="fas fa-trash-alt delete-item" onclick="deleteItem(this)"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-pizza-slice"></i>
+                        <p>Pizza</p>
+                        <p class="price">$8.80</p>
+                        <i class="fas fa-trash-alt delete-item" onclick="deleteItem(this)"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-pasta"></i>
+                        <p>Pasta</p>
+                        <p class="price">$9.30</p>
+                        <i class="fas fa-trash-alt delete-item" onclick="deleteItem(this)"></i>
+                    </li>
                 </ul>
             </div>
-        </div>
+
+            <div class="checkout-summary">
+                <p>Subtotal: $<span id="subtotal">21.90</span></p>
+                <p id="deliveryFeeText" style="display: none;">Delivery Fee: $5.00</p>
+                <p>Total: $<span id="total">21.90</span></p>
+            </div>
+
+            <button type="submit">Place Order</button>
+        </form>
     </div>
 </section>
+
     
     <footer>
         <div class="footer-container">
