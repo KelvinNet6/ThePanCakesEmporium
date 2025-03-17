@@ -9,15 +9,15 @@ header {
     background: red; /* Red background for header */
     padding: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* This will space out the items */
     align-items: center;
     border-bottom: 2px solid #ddd;
 }
 
 nav {
     display: flex;
-    align-items: center;
-    color: white; /* Make text inside nav white */
+    justify-content: center; /* Center the nav items */
+    flex-grow: 1; /* Ensures nav takes up available space between logo and icons */
 }
 
 nav ul {
@@ -33,7 +33,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white; /* Make links inside nav white */
+    color: white; /* White links for contrast */
     font-weight: bold;
 }
 
@@ -41,7 +41,7 @@ nav ul li a {
     display: flex;
     gap: 15px;
     font-size: 18px;
-    color: white; /* Ensure icons are also white */
+    color: white; /* Icons color */
 }
 
 .logo {
@@ -50,6 +50,7 @@ nav ul li a {
     gap: 10px;
     font-size: 20px;
     font-weight: bold;
+    color: white; /* Make logo text white */
 }
 
 .logo img {
